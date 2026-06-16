@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist do Eduardo 🎵</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- FUNDO -->
+    <img src="galaxia.jpg" class="fundo">
+
+    <div class="container">
+
+        <!-- PLAYER -->
+        <div class="player">
+
+            <img src="spiderman.jpg" id="spiderman">
+
+            <h1 id="titulo">Nobody</h1>
+
+            <p id="artista">Minha Playlist</p>
+
+            <!-- BOTÕES -->
+            <div class="botoes">
+
+                <button class="btn-sec" onclick="anterior()">
+                    ⏮
+                </button>
+
+                <button class="btn-play" onclick="tocar()">
+                    ▶
+                </button>
+
+                <button class="btn-pause" onclick="pausar()">
+                    ⏸
+                </button>
+
+                <button class="btn-sec" onclick="proxima()">
+                    ⏭
+                </button>
+
+            </div>
+
+            <!-- BARRA DE PROGRESSO -->
+
+            <div class="progresso-container">
+
+                <span id="tempoAtual">
+                    0:00
+                </span>
+
+                <input
+                    type="range"
+                    id="progresso"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="tempoTotal">
+                    0:00
+                </span>
+
+            </div>
+
+            <audio id="audio"></audio>
+
+        </div>
+
+        <!-- PLAYLIST -->
+
+        <div class="playlist">
+
+            <ul id="lista">
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
